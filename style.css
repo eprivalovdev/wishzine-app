@@ -1,0 +1,33 @@
+/* Wishzine site: white paper, black type, one red. Same feel as the app, nothing else. */
+:root { --ink: #111; --grey: #6b6b6b; --rule: #e2e2e2; --red: #d23c2a; --paper: #fff; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; }
+a { color: var(--ink); text-underline-offset: 3px; }
+a:hover { color: var(--red); }
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+header.top { border-bottom: 2px solid var(--ink); }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 20px; letter-spacing: -0.02em; text-decoration: none; }
+.brand img { width: 32px; height: 32px; border-radius: 8px; }
+nav a { margin-left: 18px; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; }
+nav a[aria-current] { color: var(--red); }
+main { padding: 48px 0 64px; }
+.hero h1 { font-size: clamp(56px, 14vw, 120px); line-height: 0.88; letter-spacing: -0.05em; font-weight: 900; margin: 0 0 24px; text-transform: uppercase; }
+.lead { font-size: 21px; max-width: 34em; margin: 0 0 28px; }
+.button { display: inline-block; background: var(--ink); color: #fff; padding: 14px 22px; font-size: 13px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; }
+.button:hover { background: var(--red); color: #fff; }
+.small { color: var(--grey); font-size: 14px; }
+h1.page { font-size: 44px; line-height: 1; letter-spacing: -0.03em; font-weight: 900; margin: 0 0 8px; }
+h2 { font-size: 13px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; margin: 40px 0 10px;
+  padding-top: 14px; border-top: 1px solid var(--rule); }
+.steps { list-style: none; padding: 0; margin: 40px 0 0; counter-reset: s; }
+.steps li { counter-increment: s; padding: 18px 0 18px 64px; border-top: 1px solid var(--rule); position: relative; }
+.steps li::before { content: counter(s, decimal-leading-zero); position: absolute; left: 0; top: 12px; font-size: 34px;
+  font-weight: 900; color: var(--red); letter-spacing: -0.04em; }
+.steps b { display: block; }
+footer { border-top: 2px solid var(--ink); padding: 18px 0 40px; font-size: 13px; color: var(--grey); }
+footer a { color: var(--grey); margin-right: 14px; }
+@media (max-width: 520px) { nav a { margin-left: 12px; } body { font-size: 16px; } .lead { font-size: 19px; } }

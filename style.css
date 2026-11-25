@@ -30,4 +30,9 @@ h2 { font-size: 13px; font-weight: 800; letter-spacing: 0.12em; text-transform: 
 .steps b { display: block; }
 footer { border-top: 2px solid var(--ink); padding: 18px 0 40px; font-size: 13px; color: var(--grey); }
 footer a { color: var(--grey); margin-right: 14px; }
-@media (max-width: 520px) { nav a { margin-left: 12px; } body { font-size: 16px; } .lead { font-size: 19px; } }
+@media (max-width: 520px) {
+  .brand { font-size: 17px; gap: 8px; } .brand img { width: 28px; height: 28px; }
+  nav a { margin-left: 10px; font-size: 11px; letter-spacing: 0.06em; }
+  body { font-size: 16px; } .lead { font-size: 19px; }
+}
+@media (max-width: 360px) { .brand span { display: none; } }
